@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-registration.component.css']
 })
 export class CreateRegistrationComponent {
-
+     public packages=['Monthly','Quarterly','Yearly'];
+     public genders=['Male','Female'];
+     public lists:string[]=[
+      'Toxic fat reduction',
+      'Energy and Endurance',
+      'Building lean muscle',
+      'Fitness',
+      'sugar Craving Body'
+     ]
 }
