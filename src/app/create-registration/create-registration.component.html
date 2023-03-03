@@ -44,9 +44,25 @@
             <div class="col-md-6">
                 <mat-form-field appearance="outline">
                     <mat-label> Height</mat-label>
-                    <input type="number" formControlName="height" matInput placeholder="height">
+                    <input [readonly]="!this.registerForm.value?.weight" type="number" formControlName="height" matInput placeholder="height">
                     <mat-icon matSuffix><i class="fa fa-text-height" aria-hidden="true"></i></mat-icon>
                     <mat-hint>unit in meters</mat-hint>
+                </mat-form-field>
+            </div>
+
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label> Bmi</mat-label>
+                    <input readonly  formControlName="bmi" matInput placeholder="bmi">
+                    <mat-icon matSuffix><i class="fa fa-sort-numeric-desc" aria-hidden="true"></i></mat-icon>
+                </mat-form-field>
+            </div>
+
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label> Bmi Result</mat-label>
+                    <input readonly  formControlName="bmiresult" matInput placeholder="bmiresult">
+                    <mat-icon matSuffix><i class="fa fa-check" aria-hidden="true"></i></mat-icon>
                 </mat-form-field>
             </div>
 
@@ -112,6 +128,6 @@
                   </mat-form-field>
             </div>
         </div>
-        <button (click)='submit()'class="mt-4" mat-raised-button color="accent">submit</button>
+        <button (click)='submit()'class="mt-3" mat-raised-button color="accent">submit</button>
     </form>
 </div>
